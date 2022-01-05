@@ -1,0 +1,88 @@
+.work__wrapper {
+  border-radius: 10px;
+  /* height: 200px; */
+  overflow: hidden;
+  width: 300px;
+  padding: 10px;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0px 0px 3px 0px #c1c1c1;
+  -moz-box-shadow: 0px 0px 3px 0px #c1c1c1;
+  box-shadow: 0px 0px 3px 0px #c1c1c1;
+  margin: 10px 0;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.work__wrapper .img {
+  object-fit: contain;
+  height: 200px;
+  width: 100%;
+}
+.work__wrapper .img >img{
+  object-fit: contain;
+  height: 200px;
+    width: 100%;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 600;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.linkIcon {
+  color:#5f72bd;
+  font-size: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Rating,
+.Price,
+.Ranking {
+  margin: 7px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftitle {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.rightcontent {
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.Cuisines {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#cuisines {
+  width: max-content;
+  padding: 5px;
+  margin: 3px;
+  box-shadow: 0px 0px 3px 0px #c1c1c1;
+  border-radius: 5px;
+  background: #f6f7f8;
+  outline: none;
+  border: none;
+}
+
+.work__wrapper:hover {
+  height: 100%;
+  overflow: visible;
+  transition: all 0.3s ease;
+}

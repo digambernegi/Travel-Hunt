@@ -1,0 +1,44 @@
+.map {
+  height: 100vh;
+  border: none;
+  outline: none;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  position: relative;
+  text-align: center;
+  width: 153px;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.img img {
+  height: 100px;
+  width: fit-content;
+  border-radius: 3px;
+}
+
+.info::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(224, 65, 65) transparent transparent transparent;
+}
+
+.info{
+    padding: 3px 0;
+}
+
+.weatherimg{
+  height: 50px;
+  width: 50px;
+}
