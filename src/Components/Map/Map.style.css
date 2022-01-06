@@ -7,7 +7,8 @@
 .box {
   display: flex;
   flex-direction: column;
-  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  background: #f4f9f9e0;
+  background-image: linear-gradient( 359.8deg,  rgba(252,255,222,1) 2.2%, rgba(182,241,171,1) 99.3% );
   position: relative;
   text-align: center;
   width: 153px;
@@ -15,7 +16,6 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
 
 .img img {
   height: 100px;
@@ -34,11 +34,11 @@
   border-color: rgb(224, 65, 65) transparent transparent transparent;
 }
 
-.info{
-    padding: 3px 0;
+.info {
+  padding: 3px 0;
 }
 
-.weatherimg{
+.weatherimg {
   height: 50px;
   width: 50px;
 }
