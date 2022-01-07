@@ -10,11 +10,13 @@ const Map = ({
   setCoordinates,
   setBounds,
   places,
-  setChildClicked,
+  setScrollTo,
   weather,
 }) => {
   const matches = useMediaQuery("(min-width:600px)");
 
+
+  //render GoogleMapReact component and elements
   return (
     <div className="map">
       <GoogleMapReact
@@ -32,7 +34,7 @@ const Map = ({
           setCoordinates({ lat: e.center.lat, lng: e.center.lng });
           setBounds({ ne: e.marginBounds.ne, sw: e.marginBounds.sw });
         }}
-        onChildClick={(child) => setChildClicked(child)}
+        onChildClick={(child) => setScrollTo(child)}
       >
         {places?.map((place, index) => (
           <div
@@ -56,7 +58,9 @@ const Map = ({
                     }
                   />
                 </div>
-                <div className="info">{place.name} ({place?.parent_display_name})</div>
+                <div className="info">
+                  {place.name} ({place?.parent_display_name})
+                </div>
                 <div className="info">
                   {Number(place.rating)} <small> Star</small>
                 </div>

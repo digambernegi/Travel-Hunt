@@ -1,4 +1,4 @@
-.work__wrapper {
+.card__wrapper {
   border-radius: 5px;
   height: 300px;
   overflow: hidden;
@@ -13,28 +13,27 @@
   cursor: pointer;
 }
 
-.work__wrapper .img {
+.card__wrapper .img {
   object-fit: contain;
   height: 200px;
   width: 100%;
 }
-.work__wrapper .img > img {
+.card__wrapper .img > img {
   object-fit: contain;
   height: 200px;
   width: 100%;
 }
 
-.open_now_text{
+.open_now_text {
   line-height: 40px;
   padding: 5px;
   color: #ffffff;
-  background-color: #77D970;
+  background-color: #77d970;
   border-radius: 3px;
-
 }
 
-.nocontent{
- display: none;
+.nocontent {
+  display: none;
 }
 .top {
   display: flex;
@@ -93,8 +92,12 @@
   border: none;
 }
 
-.work__wrapper:hover {
+.card__wrapper:hover {
   height: 100%;
   overflow: visible;
-  transition:all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.ranking .rightcontent {
+  border: 1px solid;
 }

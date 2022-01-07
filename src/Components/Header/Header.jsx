@@ -4,8 +4,9 @@ import "./Header.style.css";
 import SearchIcon from "@material-ui/icons/Search";
 
 const Header = ({ setCoordinates }) => {
-  const [autocomplete, setAutocomplete] = useState(null);
 
+  //setting up google Autocomplete component
+  const [autocomplete, setAutocomplete] = useState(null);
   const onLoad = (autoC) => setAutocomplete(autoC);
 
   const onPlaceChanged = () => {
@@ -14,6 +15,7 @@ const Header = ({ setCoordinates }) => {
     setCoordinates({ lat, lng });
   };
 
+  //rednder elements
   return (
     <div className="nav">
       <div className="nav__h4">

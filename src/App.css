@@ -35,17 +35,15 @@ body::-webkit-scrollbar {
 .rightSide {
   /* flex:1 1 auto; */
   overflow-x: scroll;
-  transition:all 0.3s ease;
-
+  transition: all 0.3s ease;
 }
 .rightSide::-webkit-scrollbar {
   display: none;
   transition: all 0.3s ease;
-
 }
 
-@media only screen and(max-width:876px) {
+@media only screen and(max-width:700px) {
   .twocolgrid {
-    flex-wrap: wrap-reverse;
+    flex-direction: column;
   }
 }

@@ -6,7 +6,7 @@ import LanguageSharp from "@material-ui/icons/LanguageSharp";
 import PhoneIphoneSharp from "@material-ui/icons/PhoneIphoneSharp";
 
 const Card = ({ place, selected, refProp }) => {
-  console.log(place);
+  //abtracting data from api to variables
   const image = place.photo
     ? place.photo.images.large.url
     : "https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2021/07/pune-restaurants.jpg?fit=1000%2C667&ssl=1";
@@ -16,25 +16,31 @@ const Card = ({ place, selected, refProp }) => {
   const rating = Number(place.rating);
   const price = place.price;
   const ranking = place.ranking;
-  const open_now_text=place?.open_now_text;
+  const open_now_text = place?.open_now_text;
   const awardImg = place?.award?.map((award) => <img src={award} alt="img" />);
 
+  //When card on map clicked, scroll to that particular card on right side
   if (selected)
     refProp?.current?.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    function truncate(string, n) {
-      return string?.length > n ? string.substr(0, n - 1) + "..." : string;
-    }
-    const isContent = open_now_text===''? 'nocontent' : open_now_text;
+  //truncationg string for specific characters only
+  function truncate(string, n) {
+    return string?.length > n ? string.substr(0, n - 1) + "..." : string;
+  }
 
+  const isContent = open_now_text === "" ? "nocontent" : open_now_text;
+
+  // render elements
   return (
-    <div className="work__wrapper">
+    <div className="card__wrapper">
       <div className="img">
         <img src={image} alt="img" />
       </div>
 
       <div className="infobox">
-        <small className={isContent? 'open_now_text': 'nocontent'}>{isContent}</small>
+        <small className={isContent ? "open_now_text" : "nocontent"}>
+          {isContent}
+        </small>
         <div className="top">
           <div>{truncate(title, 30)}</div>
           <div className="icon">
@@ -47,17 +53,18 @@ const Card = ({ place, selected, refProp }) => {
         </div>
 
         <div className="bottom">
-          <div className="Rating">
+          <div className="Ranking">
             <div className="leftitle">Ranking</div>
             <div className="rightcontent">{ranking}</div>
+            {awardImg}
           </div>
 
-          <div className="Price">
+          <div className="Rating">
             <div className="leftitle">Rating</div>
             <div className="rightcontent">{rating}</div>
           </div>
 
-          <div className="Ranking">
+          <div className="Price">
             <div className="leftitle">Price</div>
             <div className="rightcontent">{price}</div>
           </div>

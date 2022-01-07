@@ -6,15 +6,16 @@ import Card from "../Card/Card";
 const List = ({
   loading,
   places,
-  childClicked,
+  scrollTo,
   type,
   setType,
   rating,
   setRating,
 }) => {
+  
 
-  console.log({childClicked});
   const [ref, setRef] = useState([]);
+
 
   useEffect(() => {
     const refs = Array(places?.length)
@@ -23,10 +24,11 @@ const List = ({
     setRef(refs);
   }, [places]);
 
+  //rednder elements
   return (
     <div className="list">
       <div style={{ textAlign: "center" }} className="list__title">
-        <h4>Discover Hotels & Restaurants</h4>
+        <h4>Discover Hotels & Restaurants and more..</h4>
       </div>
       {loading ? (
         <div className="loadingstate">
@@ -66,7 +68,7 @@ const List = ({
               <Card
                 place={place}
                 refProp={ref[index]}
-                selected={Number(childClicked) === index}
+                selected={Number(scrollTo) === index}
               />
             </div>
           ))}

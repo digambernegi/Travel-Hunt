@@ -4,16 +4,18 @@ import { Header, List, Map } from "./Components";
 import { getPlaces, getWeatherData } from "./API/apiData";
 
 function App() {
+  //state variables
   const [places, setPlaces] = useState([]);
-  const [coordinates, setCoordinates] = useState({ lat: 0, lng: 0 });
+  const [coordinates, setCoordinates] = useState({});
   const [bounds, setBounds] = useState({});
   const [weather, setWeather] = useState([]);
   const [filteredPlaces, setFilteredPlaces] = useState([]);
-  const [type, setType] = useState("restaurant");
+  const [type, setType] = useState("Restaurant");
   const [rating, setRating] = useState("");
   const [loading, setLoading] = useState(false);
-  const [childClicked, setChildClicked] = useState({});
+  const [scrollTo, setScrollTo] = useState({});
 
+  //retrieve use default geoLocation from Browser is location allow and set coordinates accordingly
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       ({ coords: { latitude, longitude } }) => {
@@ -22,23 +24,28 @@ function App() {
     );
   }, []);
 
+  //filtering places based on rating
   useEffect(() => {
     const filteredPlaces = places.filter((place) => place.rating > rating);
     setFilteredPlaces(filteredPlaces);
   }, [rating]);
 
+  //fetching api data on state change, proving bounds, type change and more...
   useEffect(() => {
     if (bounds.sw && bounds.ne) {
       setLoading(true);
-      getWeatherData(coordinates.lat, coordinates.lng).then((data) => setWeather(data));
-      getPlaces(type,bounds.sw, bounds.ne).then((data) => {
+      getWeatherData(coordinates.lat, coordinates.lng).then((data) =>
+        setWeather(data)
+      );
+      getPlaces(type, bounds.sw, bounds.ne).then((data) => {
         setPlaces(data?.filter((place) => place.name && place.num_reviews > 0));
         setFilteredPlaces([]);
         setLoading(false);
       });
     }
-  }, [type,coordinates, bounds]);
+  }, [type, coordinates, bounds]);
 
+  //render elements
   return (
     <>
       <div className="header">
@@ -47,26 +54,34 @@ function App() {
 
       <div className="twocolgrid">
         <div className="leftSide">
-          <Map
-            coordinates={coordinates}
-            setCoordinates={setCoordinates}
-            setBounds={setBounds}
-            places={filteredPlaces.length ? filteredPlaces : places}
-            setChildClicked={setChildClicked}
-            weather={weather}
-          />
+          {getPlaces.length ? (
+            <Map
+              coordinates={coordinates}
+              setCoordinates={setCoordinates}
+              setBounds={setBounds}
+              places={filteredPlaces.length ? filteredPlaces : places}
+              setScrollTo={setScrollTo}
+              weather={weather}
+            />
+          ) : (
+            "No data found"
+          )}
         </div>
 
         <div className="rightSide">
-          <List
-            loading={loading}
-            places={filteredPlaces.length ? filteredPlaces : places}
-            childClicked={childClicked}
-            type={type}
-            setType={setType}
-            rating={rating}
-            setRating={setRating}
-          />
+          {getPlaces.length ? (
+            <List
+              loading={loading}
+              places={filteredPlaces.length ? filteredPlaces : places}
+              scrollTo={scrollTo}
+              type={type}
+              setType={setType}
+              rating={rating}
+              setRating={setRating}
+            />
+          ) : (
+            "No data found"
+          )}
         </div>
       </div>
     </>
