@@ -9,6 +9,16 @@ This is a React Google map project that allows real-time Places suggestion aroun
 ![](https://github.com/digambernegi/Travel-Hunt/blob/master/src/assets/images/home.JPG)
 
 
+## Tech Stack
+
+**Client:** React, HTML, CSS
+
+**Server:** Node
+
+**Icon:** MaterialUI lab,core,icons
+
+
+
 ## Features
 
 - Retrive user geo-location automatically
@@ -35,7 +45,9 @@ OR
 ```
     
 ## Documentation
-Get Your api key from Rapid api 
+
+## Rapid API
+Get Your Real data api key from Rapid API
 
 [Travel Advisor](https://rapidapi.com/apidojo/api/travel-advisor/)
 
@@ -44,3 +56,18 @@ Get Your api key from Rapid api
 [Open Weather](https://rapidapi.com/community/api/open-weather-map/)
 
 ![](https://github.com/digambernegi/Travel-Hunt/blob/master/src/assets/images/weather.JPG)
+
+## Google Cloud Console
+Activate two Api library form Google Cloud Platform and get their common API key
+
+![Maps JavaScript API](https://github.com/digambernegi/Travel-Hunt/blob/master/src/assets/images/map.JPG)
+
+![Places API](https://github.com/digambernegi/Travel-Hunt/blob/master/src/assets/images/places.JPG)
+## Deployment
+
+To deploy this project run
+
+```bash
+  npm run deploy
+```
+
