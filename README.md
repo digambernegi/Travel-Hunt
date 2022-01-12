@@ -6,7 +6,7 @@ This is a React Google map project that allows real-time Places suggestion aroun
 
 ## Screenshots
 
-![](assets/images/home.jpg)
+![](https://github.com/digambernegi/Travel-Hunt/blob/master/src/assets/images/home.JPG)
 
 
 ## Features
@@ -39,8 +39,8 @@ Get Your api key from Rapid api
 
 [Travel Advisor](https://rapidapi.com/apidojo/api/travel-advisor/)
 
-![](assets/images/advisor.jpg)
+![](https://github.com/digambernegi/Travel-Hunt/blob/master/src/assets/images/advisor.JPG)
 
 [Open Weather](https://rapidapi.com/community/api/open-weather-map/)
 
-![](assets/images/weather.jpg)
+![](https://github.com/digambernegi/Travel-Hunt/blob/master/src/assets/images/weather.JPG)
