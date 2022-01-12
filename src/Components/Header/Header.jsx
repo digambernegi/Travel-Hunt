@@ -19,7 +19,7 @@ const Header = ({ setCoordinates }) => {
   return (
     <div className="nav">
       <div className="nav__h4">
-        <h2>Next Stop Hunt</h2>
+        <h2>Travel Buddy</h2>
       </div>
       <Autocomplete onLoad={onLoad} onPlaceChanged={onPlaceChanged}>
         <div className="nav__input">

@@ -28,7 +28,7 @@ const List = ({
   return (
     <div className="list">
       <div style={{ textAlign: "center" }} className="list__title">
-        <h4>Discover Hotels & Restaurants and more..</h4>
+        <h4>Discover Hotels, Restaurants and more..</h4>
       </div>
       {loading ? (
         <div className="loadingstate">
