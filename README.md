@@ -6,7 +6,7 @@ This is a React Google map project that allows real-time Places suggestion aroun
 
 ## Screenshots
 
-![](assets/images/home.jpg)
+![](https://github.com/digambernegi/Travel-Hunt/blob/master/src/assets/images/home.JPG)
 
 
 ## Features
