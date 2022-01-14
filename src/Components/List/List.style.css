@@ -8,6 +8,11 @@
   font-weight: 500;
   margin: 0px 0 15px 0;
 }
+.loadingstate{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .form {
   display: flex;

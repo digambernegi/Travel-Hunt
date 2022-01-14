@@ -32,7 +32,7 @@ const List = ({
       </div>
       {loading ? (
         <div className="loadingstate">
-          <CircularProgress size="3rem" />
+          <CircularProgress className='progress' color="success" size="3rem"/>
         </div>
       ) : (
         <>
