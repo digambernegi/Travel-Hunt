@@ -37,3 +37,8 @@ select {
   border-radius: 4px;
 }
 
+@media only screen and (max-width: 768px) {
+  .list{
+    padding: 0;
+  }
+}

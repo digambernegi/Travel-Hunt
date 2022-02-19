@@ -14,26 +14,19 @@ body::-webkit-scrollbar {
 
 .twocolgrid {
   display: flex;
-  height: 100vh;
   padding: 10px;
   gap: 5px;
 }
 
-.flex-container > div {
-  background: #ffecb3;
-  border: 3px solid #ffcc80;
-  border-radius: 5px;
-  padding: 8px;
-}
-
 .leftSide {
+  height: 100vh;
   /* flex:0.2 1 auto; */
   flex-grow: 1 !important;
   box-shadow: 0px 0px 5px 0px #c1c1c1;
 }
 
 .rightSide {
-  /* flex:1 1 auto; */
+  height: 100vh;
   overflow-x: scroll;
   transition: all 0.3s ease;
 }
@@ -42,8 +35,8 @@ body::-webkit-scrollbar {
   transition: all 0.3s ease;
 }
 
-@media only screen and(max-width:700px) {
+@media only screen and (max-width: 768px) {
   .twocolgrid {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }

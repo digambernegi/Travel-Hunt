@@ -50,7 +50,7 @@ function App() {
     <>
       <div className="header">
         <Header setCoordinates={setCoordinates} />
-      </div>
+      
 
       <div className="twocolgrid">
         <div className="leftSide">
@@ -83,6 +83,7 @@ function App() {
             "No data found"
           )}
         </div>
+      </div>
       </div>
     </>
   );

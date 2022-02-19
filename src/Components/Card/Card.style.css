@@ -101,3 +101,18 @@
 .ranking .rightcontent {
   border: 1px solid;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .card__wrapper {
+    width: 100%;
+    padding: 0;
+  }
+
+  .top,.bottom{
+    padding: 3px 10px;
+  }
+  .open_now_text {
+    margin-left:10px;
+  }
+}
